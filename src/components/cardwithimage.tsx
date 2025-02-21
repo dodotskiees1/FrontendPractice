@@ -15,7 +15,7 @@ const CardImages: React.FC<CardImageProps> = ({ text, size, image }) => {
     };
 
     return (
-        <div className={`relative bg-gray-200 shadow-lg ${sizeClasses[size]}`}>
+        <div className={`relative bg-gray-200 shadow-xl ${sizeClasses[size]}`}>
             {image && (
                 <img 
                     src={`/assets/images/${image}`} 

@@ -2,6 +2,8 @@ import React from 'react';
 import Button from '../components/button';
 import Card from '../components/card';
 import CardImages from '../components/cardwithimage';
+import Extra from '../components/extracard';
+import Footer from '../components/footer';
 
 const Components = () => {
   return (
@@ -25,7 +27,7 @@ const Components = () => {
 
       <Button size='sm' text='Small' />
       <Button size='lg' text='Large' />
-     <Card text=''/>
+     <Card />
      <div className='flex justify-center'>
 
      <CardImages size='small' text=''/>
@@ -35,8 +37,9 @@ const Components = () => {
      <div className='flex justify-center'>
 
      <CardImages size='large' text='' />
-    
+      <Extra  size='large' />
      </div>
+     <Footer size='large'/>
     </div>
   )
 }
