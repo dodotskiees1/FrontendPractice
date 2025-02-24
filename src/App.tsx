@@ -1,9 +1,9 @@
 
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Button from './components/button'
-import Main from './pages/main'
+
 import Components from './pages/Components'
+import Main from './pages/Main'
 
 function App() {
   // const [count, setCount] = useState(0)

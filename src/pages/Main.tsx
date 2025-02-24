@@ -1,4 +1,4 @@
-import React from "react";
+
 import Button from "../components/button";
 import CardImages from "../components/cardwithimage";
 import Card from "../components/card";
