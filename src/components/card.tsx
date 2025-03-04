@@ -8,7 +8,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ image, children }) => {
   const darkMode = useSelector((state: RootState) => state.theme.darkMode);
   return (
-  <div className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'}bg-white shadow-xl h-[264px] w-[300px] pt-8`}>
+  <div className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}bg-white shadow-xl h-[264px] w-[300px] pt-8`}>
       
       {image && (
                 <img 

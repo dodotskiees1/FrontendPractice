@@ -14,7 +14,7 @@ const Extra: React.FC<extraProps> = ({ size, children, }) => {
         large: 'h-[440px] w-[90%]',
     };
     return (
-        <div className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'} bg-gray-100 shadow-lg ${sizeClasses[size]} p-4`}>
+        <div className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-black'} bg-gray-100 shadow-lg ${sizeClasses[size]} p-4`}>
             {children}
         
         </div>
