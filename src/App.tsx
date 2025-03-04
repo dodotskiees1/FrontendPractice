@@ -1,26 +1,18 @@
-
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
 import Components from './pages/Components'
 import Main from './pages/Main'
+import PWAPrompt from './components/PWAPrompt'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <div>
-        <BrowserRouter>
-
-          <Routes>
-
+      <BrowserRouter>
+        <Routes>
           <Route index element={<Main />} />
-
-           <Route path="/components" element={<Components />} />
-
-            </Routes>
-
-          </ BrowserRouter>
+          <Route path="/components" element={<Components />} />
+        </Routes>
+        <PWAPrompt />
+      </BrowserRouter>
     </div>
   )
 }

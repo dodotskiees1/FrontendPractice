@@ -4,10 +4,18 @@ import CardImages from "../components/cardwithimage";
 import Card from "../components/card";
 import Extra from "../components/extracard";
 import Footer from "../components/footer";
+import {FiMoon, FiSun } from "react-icons/fi";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../redux/themeSlice';
+import { RootState } from '../redux/store';
 
 const Main = () => {
+  const dispatch = useDispatch();
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode);
+
   return (
-    <div>
+    <div className={darkMode ? 'dark' : ''}>
+      <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
  <div className="md:flex w-full items-center py-5 px-5 md:px-20 justify-between ">
         <p className="font-bold font-sans">Bruno Simmons</p>
         <nav className="flex flex-wrap justify-between items-center gap-5 md:gap-10 text-sm md:text-base">
@@ -15,6 +23,10 @@ const Main = () => {
           <p className="font-sans">Services</p>
           <p className="font-sans">About</p>
           <Button size="sm" text="CONTACT" />
+          <button onClick={() => dispatch(toggleTheme())}>
+              {darkMode ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
+            </button>
+
         </nav>
       </div>
      
@@ -32,7 +44,7 @@ const Main = () => {
         <button />
       </div>
       <div className="border-b-2 pt-[14%]"></div>
-      <div className="mt-[5%] px-4 md:px-[8%]">
+      <div className="mt-[5%] px-4 md:px-[4%]">
         <div className=" font-bold font-sans text-4xl mb-10">
           <p className="leading-relaxed">
             The Works I do, <br />
@@ -101,7 +113,7 @@ const Main = () => {
             <Button size="lg" text="CONNECT WITH ME" />
           </div>
           <div className="hidden md:block">
-            <div className="absolute top-[242%] ml-[48%]">
+            <div className="absolute top-[258%] ml-[48%]">
               <Card image="7.png">
                 <div className="ml-4 mt-2 font-sans font-bold text-xl">
                   <p>UI/UX Design</p>
@@ -114,7 +126,7 @@ const Main = () => {
                 </div>
               </Card>
             </div>
-            <div className="pl-[65%] absolute top-[224%]">
+            <div className="pl-[65%] absolute top-[242%]">
               <Card image="6.png">
                 <div className="ml-4 mt-2 font-sans font-bold text-xl">
                   <p>Motion Graphics</p>
@@ -130,7 +142,7 @@ const Main = () => {
                 </div>
               </Card>
             </div>
-            <div className="absolute top-[258%] ml-[65%] pb-9">
+            <div className="absolute top-[275%] ml-[65%] pb-9">
               <Card image="5.png">
                 <div className="ml-4 mt-2 font-sans font-bold text-xl">
                   <p>Branding</p>
@@ -218,6 +230,7 @@ const Main = () => {
             </div>
           </div>
         </Footer>
+      </div>
       </div>
     </div>
   );
